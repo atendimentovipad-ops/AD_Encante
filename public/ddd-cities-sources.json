@@ -1,0 +1,21 @@
+{
+  "compiledAt": "2026-10-21",
+  "municipalities": 5571,
+  "ddds": 67,
+  "sources": [
+    {
+      "url": "https://www.anatel.gov.br/dadosabertos/PDA/Codigo_Nacional/PGCN.csv",
+      "use": "Atribuições DDD para os 5.565 municípios disponíveis no CSV."
+    },
+    {
+      "url": "https://github.com/kelvins/municipios-brasileiros",
+      "license": "MIT",
+      "use": "Nomes atuais, códigos IBGE e seis municípios complementares."
+    },
+    {
+      "url": "https://www.ipirangadonorte.mt.gov.br/",
+      "use": "Complemento: Ipiranga do Norte — DDD 66, pelo contato telefônico institucional."
+    }
+  ],
+  "notes": "Snapshot compilado. Dados geográficos públicos; não contêm dados dos contatos nem indicam localização atual. Municípios são a unidade da lista; não inclui bairros, distritos ou regiões administrativas como cidades separadas."
+}
