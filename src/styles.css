@@ -1,0 +1,133 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 3px);
+  --radius-md: calc(var(--radius) - 1px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 3px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-muted: var(--sidebar-muted);
+  --color-sidebar-panel: var(--sidebar-panel);
+  --color-sidebar-badge: var(--sidebar-badge);
+  --color-sidebar-highlight: var(--sidebar-highlight);
+  --color-overlay: var(--overlay);
+}
+
+:root {
+  --radius: 0.45rem;
+  --background: oklch(0.975 0.004 250);
+  --foreground: oklch(0.22 0.03 255);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 255);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.03 255);
+  --primary: oklch(0.56 0.16 252);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.94 0.012 245);
+  --secondary-foreground: oklch(0.3 0.04 255);
+  --muted: oklch(0.95 0.009 250);
+  --muted-foreground: oklch(0.53 0.025 255);
+  --accent: oklch(0.92 0.028 245);
+  --accent-foreground: oklch(0.3 0.07 250);
+  --destructive: oklch(0.58 0.22 26);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.89 0.012 250);
+  --input: oklch(0.87 0.015 250);
+  --ring: oklch(0.56 0.16 252);
+  --success: oklch(0.48 0.13 157);
+  --success-soft: oklch(0.94 0.04 157);
+  --warning: oklch(0.57 0.14 67);
+  --warning-soft: oklch(0.95 0.05 82);
+  --chart-1: oklch(0.56 0.16 252);
+  --chart-2: oklch(0.62 0.15 170);
+  --chart-3: oklch(0.68 0.16 72);
+  --chart-4: oklch(0.62 0.18 26);
+  --chart-grid: oklch(0.9 0.01 250);
+  --sidebar: oklch(0.2 0.035 253);
+  --sidebar-foreground: oklch(0.97 0.006 245);
+  --sidebar-primary: oklch(0.67 0.15 245);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.29 0.052 252);
+  --sidebar-accent-foreground: oklch(0.98 0.004 245);
+  --sidebar-border: oklch(0.33 0.035 253);
+  --sidebar-muted: oklch(0.72 0.018 250);
+  --sidebar-panel: oklch(0.245 0.037 253);
+  --sidebar-badge: oklch(0.35 0.05 250);
+  --sidebar-highlight: oklch(0.75 0.14 178);
+  --overlay: oklch(0.1 0.02 250 / 0.55);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    letter-spacing: 0;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-lg border bg-card p-4 shadow-sm md:p-5;
+  }
+  .metric-card {
+    @apply flex min-w-0 items-start gap-3 rounded-lg border bg-card p-4 shadow-sm;
+  }
+  .metric-icon {
+    @apply flex size-9 shrink-0 items-center justify-center rounded-md bg-muted text-muted-foreground;
+  }
+  .metric-icon svg {
+    @apply size-4;
+  }
+  .metric-icon-primary {
+    @apply bg-accent text-primary;
+  }
+  .metric-icon-success {
+    @apply bg-success-soft text-success;
+  }
+  .metric-icon-warning {
+    @apply bg-warning-soft text-warning;
+  }
+}

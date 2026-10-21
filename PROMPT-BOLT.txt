@@ -1,0 +1,11 @@
+Este repositório contém o código existente do meu dashboard AD de Atendimento, feito em React, TypeScript e Vite. Quero continuar o desenvolvimento e publicar este mesmo projeto no Bolt.
+
+Leia o README.md e utilize os arquivos existentes como fonte de verdade. Preserve o layout, as abas, as importações, as regras dos cálculos e as exportações. Não reconstrua o painel do zero e não substitua dados reais por exemplos.
+
+Instale as dependências usando o package-lock.json. Inicie a prévia com npm run dev. Execute npx tsc --noEmit, npm run test e npm run build. A pasta de publicação é dist.
+
+Preserve public/data.json e os arquivos de municípios por DDD, suas fontes e licenças. Mantenha as importações Excel no navegador e a persistência local em IndexedDB. Não crie backend, banco de dados, login ou integração externa sem minha solicitação.
+
+Confira especialmente o Comparativo trimestral, as abas por UF e por DDD, os gráficos por hora e a coluna de cidades: a principal fica visível e a lista completa abre ao passar o mouse ou clicar; o botão Exportar DDD deve levar todas as cidades de cada DDD para o relatório.
+
+Se houver alguma incompatibilidade com o ambiente Bolt, faça apenas a correção necessária para executar o projeto, preservando as funcionalidades, e explique a alteração. Apresente a prévia funcionando e o resultado dos testes antes da publicação.
